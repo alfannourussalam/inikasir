@@ -1,0 +1,18 @@
+<?php
+include '../../controller/barangController.php';
+
+// if (isset($_POST['simpan'])) {
+    $kode = $_POST['kode'];
+    $nama = $_POST['nama'];
+    $jenis = $_POST['jenis'];
+    $suplier = $_POST['suplier'];
+    $modal = $_POST['modal'];
+    $harga = $_POST['harga'];
+    $jumlah = $_POST['jumlah'];
+    
+    for ($i=0; $i < sizeof($kode); $i++) { 
+        barang_store($kode[$i], $nama[$i], $jenis[$i], $suplier[$i], $modal[$i], $harga[$i], $jumlah[$i]);
+    }
+    
+    header('location:/cashere/views/barang/index.php?msg=success');
+// }

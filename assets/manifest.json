@@ -1,0 +1,72 @@
+{
+  "name": "IniKasir",
+  "short_name": "IniKasir",
+  "start_url": "https://designing-world.com/suha-v2.6.0/intro.html",
+  "display": "standalone",
+  "background_color": "#100DD1",
+  "theme_color": "#100DD1",
+  "categories": ["casher", "shop", "ecommerce"],
+  "orientation": "portrait",
+  "description": "IniKasir - Aplikasi Kasir dan Stok Barang",
+  "icons": [{
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "152x152",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "167x167",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/mainlogo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

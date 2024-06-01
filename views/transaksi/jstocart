@@ -1,0 +1,61 @@
+var count = 0;
+            let subtotalbayar = 0;
+
+            $('#tocart').on('click', function() {
+                count += 1;
+                var kode = $('#kode').val();
+                var nama = $('#nama').val();
+                var harga = $('#harga').val();
+                var qty = $('#qty').val();
+                var subtotal = $('#subtotal').val();
+
+                $('#cart').append(`
+                <tr>
+                    <td>` + count + `</td>
+                    <td>
+                        <input type="text" name="kode[]" class="form-control" value="` + kode + `" readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="nama[]" class="form-control" value="` + nama + `" readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="harga[]" class="form-control" value="` + harga + `" readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="qty[]" class="form-control" value="` + qty + `" readonly>
+                    </td>
+                    <td>
+                        <input type="number" name="subtotal[]" class="form-control" id="subtotal" value="` + subtotal + `" readonly>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm remove">Delete</button>
+                    </td>
+                </tr>
+                `);
+                subtotalbayar += parseInt(subtotal);
+                $('#subtotalbayar').val(subtotalbayar);
+
+                $('#kode').val('');
+                $('#nama').val('');
+                $('#harga').val('');
+                $('#qty').val('');
+                $('#subtotal').val('');
+
+                if (count > 0) {
+                    $('.pay').show();
+                }
+
+                $('.remove').on('click', function() {
+                    var par = $(this).parents('tr');
+                    var inp = par.find('input#subtotal').val();
+                    var
+                        cur_subtotal = parseInt(inp);
+                    $(this).closest('tr').remove();
+                    count -= 1;
+                    console.log(count);
+                    console.log(cur_subtotal);
+                    subtotalbayar -= cur_subtotal;
+                    $('#subtotalbayar').val(subtotalbayar);
+                });
+
+            });

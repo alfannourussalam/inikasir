@@ -1,0 +1,50 @@
+<div class="row mb-3 border rounded-3 p-2 text-sm-center">
+                            <div class="col-sm-12 col-md-2 d-flex align-content-center fw-bold d-flex align-items-center">Pilih Pelanggan</div>
+                            <div class="col-sm-6 col-md-7 d-flex d-inline my-2 d-flex align-items-center">
+                                <div class="search-select">
+                                    <select class="selectpicker" data-live-search="true" name="pelanggan" id=pelanggan>
+                                        <option value="0" selected>Guest</option>
+                                        <?php
+                                        foreach ($user as $person) {
+                                        ?>
+                                            <option value="<?php echo $person['id'] ?>"><?php echo $person['nama'] ?></option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>
+                                </div>
+
+                                <table class="mx-4" style="border-collapse: collapse;">
+                                    <tr>
+                                        <td class="text-start fs-10 fst-italic" id="id_cust"></td>
+                                        <td rowspan="2" class="pl-4">
+                                            <input type="text" id="kode_pelanggan" name="kode_pelanggan" value="0" hidden readonly>
+                                            <input type="text" value="0" id="poin2" disabled hidden>
+                                            <input type="text" value="0" id="poin3" name="poin" hidden>
+                                            <input type="text" value="0" id="convpoin" name="convpoin" hidden readonly>
+                                            <span id="poin" class="bg-primary p-1 px-2 rounded text-white">0</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start fs-10" id="nama_cust"></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <!-- <div class="col d-flex align-items-center fw-bold my-2"> -->
+                            <!-- <h4><?php // echo $kode_transaksi 
+                                        ?></h4> -->
+                            <!-- <input type="text" value="<?php echo $kode_transaksi ?>" name="kode_transaksi" hidden> -->
+                            <!-- </div> -->
+                        </div>
+
+
+
+
+
+
+                                                        <div class="row mb-3 px-3">
+                                    <div class="custom-control custom-checkbox small">
+                                        <input type="checkbox" class="custom-control-input" id="poincheck">
+                                        <label class="custom-control-label" for="poincheck">Gunakan Poin</label>
+                                    </div>
+                                </div>
